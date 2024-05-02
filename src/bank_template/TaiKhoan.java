@@ -10,6 +10,13 @@ public abstract class TaiKhoan extends BankTemplate{
 		this.tenTK = tenTK;
 		this.soTienHienCo = soTienHienCo;
 	}
+	
+	public TaiKhoan() {
+		super();
+		maTK = "111";
+		soTienHienCo = 1000;
+	}
+
 	public String getMaTK() {
 		return maTK;
 	}

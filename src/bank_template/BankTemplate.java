@@ -21,34 +21,27 @@ public abstract class BankTemplate {
 
 	protected void ghiNhatKi() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("");
 	}
 
 	protected abstract void thucHienThaoTac();
 
 	protected void xacThucTaiKhoan() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Tài khoản hợp lệ");
 	}
 
 	protected void dangNhap() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Đăng nhập thành công");
 	}
 	public static void main(String[] args) {
-		// Tạo một tài khoản để test
-        TaiKhoan taiKhoan = new ChuyenTien("001", "Nguyen Van A", 1000);
-
-        // Test giao dịch rút tiền
-        System.out.println("==== Thử rút tiền ====");
-        RutTien rutTien = new RutTien("111", "LTN", 2000);
-        rutTien.setSoTienThaoTac(1000);
-        rutTien.thucHienThaoTac(); // Thực hiện giao dịch rút tiền
-        // Test giao dịch chuyển tiền
-        System.out.println("\n==== Thử chuyển tiền ====");
+        System.out.println("==== Rút tiền ====");
+        RutTien rutTien = new RutTien("111", "LTN", 3000);
+        rutTien.thaoTac(4000);;
+        System.out.println("\n==== Chuyển tiền ====");
         ChuyenTien chuyenTien = new ChuyenTien("112", "ABC", 3000);
-        chuyenTien.setSoTienThaoTac(1500);
-        chuyenTien.thucHienThaoTac(); // Thực hiện giao dịch chuyển tiền
+        chuyenTien.thaoTac(2000);
 	}
 	
 }
